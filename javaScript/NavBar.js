@@ -12,26 +12,14 @@ const NavBar = `
 
        </div>
        <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-lg-6 justify-content-around">
-        <li><a class="list" href="dous.html">أدعية <i class="fas fa-pray"></i></a></li>
-                <li><a class="list" href="azkar.html">أذكار <i class="fa fa-book"></i></a></li>
-                <li><a class="list" href="time.html">مواقيت الصلاة <i class="fa fa-mosque"></i></a></li>
-                <li><a class="list" href="moshf.html"> القران الكريم <i class="fa-solid fa-book-open"></i></a></li>
-                <li><a class="list" href="index.html">الرئيسية <i class="fa fa-home"></i></a></li>
+       <li><a class="list" href="dous.html">أدعية <i class="fas fa-pray"></i></a></li>
+       <li><a class="list" href="azkar.html">أذكار <i class="fa fa-book"></i></a></li>
+       <li><a class="list" href="time.html">مواقيت الصلاة <i class="fa fa-mosque"></i></a></li>
+       <li><a class="list" href="moshf.html"> القران الكريم <i class="fa-solid fa-book-open"></i></a></li>
+       <li><a class="list" href="index.html">الرئيسية <i class="fa fa-home"></i></a></li>
       </ul>
       </div>
     </div>
   </nav>
 `;
 navitem.innerHTML = NavBar;
-//  <li class="nav-item text-light">
-//           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-//         </li>
-//         <li class="nav-item text-light">
-//           <a class="nav-link" href="livePage.html">Live</a>
-//         </li>
-//         <li class="nav-item text-light">
-//           <a class="nav-link" href="moshf.html">Moshf</a>
-//         </li>
-//                 <li class="nav-item text-light">
-//           <a class="nav-link" href="time.html">Time</a>
-//         </li>

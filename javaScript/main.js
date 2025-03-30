@@ -72,21 +72,30 @@ $(document).ready(function () {
   }
 
   window.allReciter = async function () {
-    const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
-    const reciterArray = await reciters.json();
-    const result = reciterArray.reciters;
-    serchName.innerHTML = ``
-    result.map(pestReciter => {
-      const div = document.createElement("div");
-      div.classList.add("serch-name");
-      div.setAttribute("data-bs-toggle", "modal");
-      div.setAttribute("data-bs-target", "#exampleModal");
-      div.addEventListener("click", () =>
-        suraByKare(pestReciter.reciter_name, pestReciter.reciter_id)
-      );
-      div.textContent += pestReciter.reciter_name;
-      serchName.appendChild(div);
-    })
+    $(".spinner .loader").fadeIn(200);
+    try{
+      const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
+      const reciterArray = await reciters.json();
+      const result = reciterArray.reciters;
+      serchName.innerHTML = ``
+      result.map(pestReciter => {
+        const div = document.createElement("div");
+        div.classList.add("serch-name");
+        div.setAttribute("data-bs-toggle", "modal");
+        div.setAttribute("data-bs-target", "#exampleModal");
+        div.addEventListener("click", () =>
+          suraByKare(pestReciter.reciter_name, pestReciter.reciter_id)
+        );
+        div.textContent += pestReciter.reciter_name;
+        serchName.appendChild(div);
+      })
+    }catch(error){
+      console.log(error)
+    }finally{
+      $(".spinner").fadeOut(500, function () {
+        $("body").css("overflow", "auto")
+      });
+    }
   }
   // استدعاء السور مع الصوت
   async function getSura(id) {
@@ -158,7 +167,6 @@ $(document).ready(function () {
       const duas = (request.prophetic_duas);
       const sliderContainer = document.getElementById("hadithSlider");
       duas.filter((hadith) => hadith.hadithArabic && hadith.hadithArabic.length < 400);
-      console.log(duas)
       duas.map((hadith) => {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide");

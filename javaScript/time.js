@@ -12,7 +12,11 @@ $(document).ready(function () {
     } else {
       $("#nav").fadeIn(1000);
     }
-  });
+  });        
+  
+  $(".spinner").css("display","flex",()=>{
+  $(".spinner").fadeIn(200)
+})
   try {
     (async () => {
       const date = new Date();
@@ -127,6 +131,10 @@ $(document).ready(function () {
     })();
   } catch (error) {
     console.log(error);
+  }finally{
+    $(".spinner").fadeOut(500, function () {
+      $("body").css("overflow", "auto")
+    });
   }
   // them action
   $(".fa-gear").click(() => {

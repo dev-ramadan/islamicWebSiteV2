@@ -1,47 +1,6 @@
 body{
   overflow: hidden;
 }
-/* spinner */
-.spinner{
-  position: fixed;
-  top:0;
-  left: 0%;
-  right: 0%;
-  bottom:0;
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100000000;
-}
-.loader {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  background: #fff;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.loader:after{
-  content: '';
-  position: absolute;
-  inset: 8px;
-  margin: auto;
-  background: #222b32;
-   border-radius: 50%;
-}
-.loader:before{
-  content: '';
-  position: absolute;
-  inset: 0px;
-  margin: auto;
-  background: #de3500;
-  animation: crlMugLoader 2s linear infinite alternate;
-}
-@keyframes crlMugLoader {
-  0%  ,10% { transform: translateY(64px) }
-  90% , 100% { transform: translateY(0px) }
-}
 .modal{
   z-index: 10000000000;
 }

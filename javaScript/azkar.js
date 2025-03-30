@@ -11,7 +11,9 @@ $(document).ready(function () {
     }
 
     (async () => {
-        $(".spinner .loader").fadeIn(200)
+        $(".spinner").css("display","flex",()=>{
+            $(".spinner").fadeIn(200)
+        })
         try {
             const getAzkar =   await fetch("https://api.allorigins.win/raw?url=https://alquran.vip/APIs/azkar");
             const azkarJson = await getAzkar.json();

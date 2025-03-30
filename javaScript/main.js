@@ -72,7 +72,9 @@ $(document).ready(function () {
   }
 
   window.allReciter = async function () {
-    $(".spinner .loader").fadeIn(200);
+    $(".spinner").css("display","flex",()=>{
+      $(".spinner").fadeIn(200)
+  })
     try{
       const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
       const reciterArray = await reciters.json();

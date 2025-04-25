@@ -12,11 +12,11 @@ $(document).ready(function () {
     } else {
       $("#nav").fadeIn(1000);
     }
-  });        
-  
-  $(".spinner").css("display","flex",()=>{
-  $(".spinner").fadeIn(200)
-})
+  });
+
+  $(".spinner").css("display", "flex", () => {
+    $(".spinner").fadeIn(200)
+  })
   try {
     (async () => {
       const date = new Date();
@@ -54,8 +54,7 @@ $(document).ready(function () {
       time.innerHTML = `
             <div class="col-12  date">
             <div><h5>${dateHijri.date}</h5></div>
-            <div><h5>${dateHijri.weekday.ar}--${dateHijri.day}--${dateHijri.month.ar}
-            </h5></div>
+            <div><h5>${dateAPI.weekday.en}-${dateAPI.day}-${dateAPI.month.en}</h5></div>
             <div><h5>${dateAPI.date}</h5></div>
             </div>
                     <div class="col-12 d-flex justify-content-between flex-column gap-4 time-piranr">
@@ -131,7 +130,7 @@ $(document).ready(function () {
     })();
   } catch (error) {
     console.log(error);
-  }finally{
+  } finally {
     $(".spinner").fadeOut(500, function () {
       $("body").css("overflow", "auto")
     });

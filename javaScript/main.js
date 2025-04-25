@@ -26,7 +26,11 @@ $(document).ready(function () {
   });
   // استدعاء القراء
   (async function getReciter() {
-    const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
+    $(".spinner").css("display","flex",()=>{
+      $(".spinner").fadeIn(200)
+  })
+    try{
+      const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
     const reciterArray = await reciters.json();
     const result = reciterArray.reciters;
     const pestReciters = result.splice(250);
@@ -50,8 +54,14 @@ $(document).ready(function () {
     karae.addEventListener("change", (e) => {
       getSura(e.target.value);
     });
+    }catch(error){
+      console.log(error)
+    }
   })();
 
+
+
+  
   window.bestReciter = async function () {
     const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
     const reciterArray = await reciters.json();
@@ -72,9 +82,7 @@ $(document).ready(function () {
   }
 
   window.allReciter = async function () {
-    $(".spinner").css("display","flex",()=>{
-      $(".spinner").fadeIn(200)
-  })
+
     try{
       const reciters = await fetch(`https://alquran.vip/APIs/reciters`);
       const reciterArray = await reciters.json();

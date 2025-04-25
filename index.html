@@ -28,33 +28,30 @@
     </div>
     <div id="navHome">
       <nav class="them navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="dist/image/loo.png" class="logo img-fluid"></img></a>
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand" href="index.html"><img src="dist/image/loo.png" class="logo img-fluid"></img></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <i class="fa-solid fa-bars menu"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="col-lg-6">
-
-            </div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-lg-6 justify-content-around">
-              <li><a class="list" href="dous.html">أدعية <i class="fas fa-pray"></i></a></li>
-              <li><a class="list" href="azkar.html">أذكار <i class="fa fa-book"></i></a></li>
-              <li><a class="list" href="time.html">مواقيت الصلاة <i class="fa fa-mosque"></i></a></li>
-              <li><a class="list" href="moshf.html"> القران الكريم <i class="fa-solid fa-book-open"></i></a></li>
-              <div class="layouy d-flex justify-content-between">
+            <ul class="navbar-nav  mb-2 mb-lg-0 col-lg-6 justify-content-around offset-3" style="width:fit-content;z-index: 10;">
+              <li class="w-auto"><a class="list" href="dous.html">أدعية <i class="fas fa-pray"></i></a></li>
+              <li class="w-auto"><a class="list" href="azkar.html">أذكار <i class="fa fa-book"></i></a></li>
+              <li class="w-auto"><a class="list" href="time.html">مواقيت الصلاة <i class="fa fa-mosque"></i></a></li>
+              <li class="w-auto"><a class="list" href="moshf.html"> القران الكريم <i class="fa-solid fa-book-open"></i></a></li>
                 <li><a class="list" href="index.html">الرئيسية <i class="fa fa-home"></i></a></li>
-                <li class="nav-item text-light radio">
-                  <a id="radioButton" class="btn btn-success ply-btn btn-play"
-                    data-url="https://stream.radiojar.com/8s5u5tpdtwzuv">
-                    <i class="fas fa-radio" style="color: #fff;"></i>
-                    راديو قرآن
-                  </a>
-                </li>
-              </div>
             </ul>
+            <div class="w-75   position-absolute d-flex justify-content-end" style="right: 10px; bottom: 18px;">
+              <li class="nav-item text-light radio offset-6">
+                <a id="radioButton" class="btn btn-success ply-btn btn-play"
+                  data-url="https://stream.radiojar.com/8s5u5tpdtwzuv">
+                  <i class="fas fa-radio" style="color: #fff;"></i>
+                  راديو قرآن
+                </a>
+              </li>
+            </div>
           </div>
         </div>
       </nav>

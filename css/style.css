@@ -1,7 +1,7 @@
-body{
-  overflow: hidden;
-}
-.modal{
+
+html, body {
+  height: auto;
+}.modal{
   z-index: 10000000000;
 }
 .website {

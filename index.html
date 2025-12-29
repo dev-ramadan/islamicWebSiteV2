@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +10,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/nav&footer.css">
-  <link rel="stylesheet" href="css/themBox.css">
-  <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/nav&footer.css" />
+  <link rel="stylesheet" href="./css/themBox.css" />
+  <link rel="stylesheet" href="./css/loading.css" />
+
+
+
+
+  
 </head>
 
 <body>
@@ -106,6 +110,9 @@
                     <select id="reciter-list">
                       <option value="">اختر القارئ</option>
                     </select>
+                    <select id="riwayat">
+                      <option value="">اختر المصحف</option>
+                    </select>
                     <select id="surah-list">
                       <option value="">اختر السورة</option>
                     </select>
@@ -132,18 +139,15 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
     <section class="sc3 container d-flex justify-content-center align-items-center flex-column position-relative">
       <div class="container mt-5 serch position-relative">
         <i class="fa-solid fa-magnifying-glass position-absolute serch-icon"></i>
-        <input type="text" class=" form-control input-serch" oninput="serch(this.value)" onblur="bestReciter()"
-          placeholder="ابحث عن القارئ">
+        <input type="text" class=" form-control input-serch" oninput="serch(this.value)" placeholder="ابحث عن القارئ">
       </div>
       <div class="container mt-5 reciters-name">
-        <div class="all-reciters"><span onclick="allReciter()">كل القراء</span> <span onclick="bestReciter()">افضل
-            القراء</span></div>
         <div class="name">
         </div>
       </div>
